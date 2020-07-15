@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  get "/dasgboard" =>'dasgboard#index', as: :dasgboard
+  get 'dasgboard/properties'
+  get 'dasgboard/reports'
+
   resources :properties
   devise_for :accounts
   root to: 'page#main'
