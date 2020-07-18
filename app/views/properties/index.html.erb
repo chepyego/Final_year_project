@@ -1,15 +1,14 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Properties</h1>
+<h1 class="h3">Properties</h1>
 
-<table>
+<table class=" table table-striped">
   <thead>
     <tr>
       <th>Name</th>
       <th>Address</th>
       <th>Room</th>
       <th>Price</th>
-      <th>Interger</th>
       <th>Bathrooms</th>
       <th colspan="3"></th>
     </tr>
@@ -22,7 +21,6 @@
         <td><%= property.address %></td>
         <td><%= property.room %></td>
         <td><%= property.price %></td>
-        <td><%= property.interger %></td>
         <td><%= property.bathrooms %></td>
         <td><%= link_to 'Show', property %></td>
         <td><%= link_to 'Edit', edit_property_path(property) %></td>

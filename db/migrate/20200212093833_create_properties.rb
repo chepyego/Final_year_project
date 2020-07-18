@@ -3,9 +3,9 @@ class CreateProperties < ActiveRecord::Migration[6.0]
     create_table :properties do |t|
       t.references :account
       t.string :name
-      t.string :address
-      t.integer :room
-      t.string :price
+      t.string  :address
+      t.integer :rooms
+      t.integer :price
       t.integer :bathrooms
       t.string :photo
 
