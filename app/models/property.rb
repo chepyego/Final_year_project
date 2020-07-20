@@ -1,3 +1,4 @@
 class Property < ApplicationRecord
-    it { should belong_to(:account) } 
+    mount_uploader :photo, ImageUploader
+    belongs_to :account
 end
