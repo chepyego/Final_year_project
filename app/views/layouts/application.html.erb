@@ -13,7 +13,7 @@
   </head>
 
   <body id="<%= controller.controller_name%>" class="<%= controller.action_name%>"> 
-  <% if ["public","devise","sessions"].include?(controller.controller_name)%>
+   <% if ["page","devise","sessions"].include?(controller.controller_name)%>
   <header>
     <%= render "layouts/nav/public" %>
      <%= yield %>
@@ -22,7 +22,7 @@
      <%= render "layouts/nav/dashboard" %>
       <div class="container-fluid"> 
         <div class="row">
-          <%= render "layouts/nav/sidebar"%>
+          <%= render "layouts/nav/sidebar" %>
        
           <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4 mt-5" >    
            <%= yield %>
