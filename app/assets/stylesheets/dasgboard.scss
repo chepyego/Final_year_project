@@ -2,12 +2,19 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
 
-#dasgboard, #property{
-    .feather{
-        width: 16px;
-        height: 16px;
-        vertical-align: text-bottom;
-    }
+// #dasgboard, #property{
+//     .feather{
+//         width: 16px;
+//         height: 16px;
+//         vertical-align: text-bottom;
+//     }
+
+    .show-sidebar{
+        .feather{
+            width: 16px;
+            height: 16px;
+            vertical-align: text-bottom;
+        }
     .sidebar{
         position: fixed;
         top: 0;

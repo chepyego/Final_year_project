@@ -1,0 +1,12 @@
+development:
+  cloud_name: deqwzoy3d
+  api_key: '781474332937132'
+  api_secret: Pdrugg4-wiXxZtZXrBBRJ4JWRpg
+  enhance_image_tag: true
+  static_file_support: false
+production:
+  cloud_name: deqwzoy3d
+  api_key: '781474332937132'
+  api_secret: Pdrugg4-wiXxZtZXrBBRJ4JWRpg
+  enhance_image_tag: true
+  static_file_support: true

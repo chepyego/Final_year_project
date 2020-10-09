@@ -12,4 +12,12 @@ class Account < ApplicationRecord
         #  user.password = "yourPassword"
         #  user.skip_confirmation!
         #  user.save
+
+        def full_name
+          "#{first_name} #{last_name}"
+        end
+
+        def company
+          "test company"
+        end
 end

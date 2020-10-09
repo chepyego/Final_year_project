@@ -1,6 +1,7 @@
 class PropertiesController < ApplicationController
   before_action :set_property, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_account!, only: [:new,:create,:destroy]
+  before_action :set_sidebar, except: [:show]
 
   # GET /properties
   # GET /properties.json
@@ -11,6 +12,7 @@ class PropertiesController < ApplicationController
   # GET /properties/1
   # GET /properties/1.json
   def show
+    @agent = @property.account
   end
 
   # GET /properties/new
@@ -20,6 +22,7 @@ class PropertiesController < ApplicationController
 
   # GET /properties/1/edit
   def edit
+    
   end
 
   # POST /properties
@@ -69,8 +72,12 @@ class PropertiesController < ApplicationController
       @property = Property.find(params[:id])
     end
 
+    def set_sidebar
+      @show_sidebar = true
+    end
+
     # Only allow a list of trusted parameters through.
     def property_params
-      params.require(:property).permit(:name, :address, :room, :price, :interger, :bathrooms, :photo, :photo_cache)
+      params.require(:property).permit(:name, :address, :room, :price,  :bathrooms, :photo, :photo_cache)
     end
 end

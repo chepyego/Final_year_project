@@ -1,4 +1,6 @@
 class DasgboardController < ApplicationController
+ before_action :set_sidebar
+
   def index
   end
 
@@ -7,4 +9,12 @@ class DasgboardController < ApplicationController
 
   def reports
   end
+   
+  private
+
+  def set_sidebar
+    @show_sidebar = true
+  end
+
+
 end

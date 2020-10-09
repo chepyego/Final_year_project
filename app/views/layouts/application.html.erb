@@ -12,12 +12,13 @@
     <%= javascript_pack_tag 'application' %>
   </head>
 
-  <body id="<%= controller.controller_name%>" class="<%= controller.action_name%>"> 
-   <% if ["page","devise","sessions"].include?(controller.controller_name)%>
+  <body id="<%= controller.controller_name %>" class="<%= controller.action_name%> <%= "show-sidebar" if @show_sidebar.present? %>"> 
+   <% if @show_sidebar.nil? %>
   <header>
     <%= render "layouts/nav/public" %>
-     <%= yield %>
   </header>
+
+    <%=yield %>
   <% else %>
      <%= render "layouts/nav/dashboard" %>
       <div class="container-fluid"> 
