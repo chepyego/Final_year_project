@@ -1,9 +1,10 @@
-<div class=""> 
-  <h3 class="h4"><%= @agent.full_name %></h3> 
+<div class="contact "> 
+
+  <h3 class="h6"><%= @agent.full_name %></h3> 
    <p><%= @agent.company%></p>
-
-   <button class="btn btn-info">call <%= @agent.first_name %></button><br>
+   <div class="details">
+   <button class="btn btn-info text-uppercase mt-3">call <%= @agent.first_name %></button>
    
-   <button class="btn btn-success">Email <%= @agent.last_name %></button>
-
+   <button class="btn btn-success ">Email  for more information<%= @agent.last_name %></button>
+   </div>
 </div>
